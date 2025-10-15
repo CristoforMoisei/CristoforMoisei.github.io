@@ -445,6 +445,22 @@
                 flex-direction: column;
             }
         }
+        .container {
+      width: 300px;           /* larghezza del div */
+      height: 200px;          /* altezza del div */
+      border: 2px solid #333; /* bordo per vedere il perimetro */
+      display: flex;          /* centra l'immagine */
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;       /* nasconde l'immagine che esce dal div */
+    }
+
+    .container img {
+      width: 100%;            /* l'immagine si adatta alla larghezza */
+      height: auto;           /* mantiene le proporzioni */
+      object-fit: cover;      /* riempie il div tagliando l’eccesso */
+    }
+
     </style>
 </head>
 <body>
@@ -452,7 +468,9 @@
 
     <header>
         <div class="header-content">
-            <div class="logo">BidZone</div>
+            <div class="container">
+                <img src="------------" alt="Immagine di esempio">
+            </div>
             <div id="datetime" style="text-align:center; margin-top:10px; font-size:16px; color:white;"></div>
             <nav>
                 <a href="#home">Home</a>
